@@ -1,4 +1,4 @@
-## fundamental Information.
+## Brief Introduction.
 Complie and runs.
 ```bash
 go run helloworld.go
