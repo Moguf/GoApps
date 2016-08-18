@@ -14,10 +14,13 @@ func main(){
 	start := time.Now()
 	ch := make(chan string)
 	for _, url := range os.Args[1:]{
-		go fetch(url,ch)
+		go fetch(url,ch) // start a goroutine
+		// concurrent function exectuion
 	}
 	for range os.Args[1:]{
-		fmt.Println(<-ch)
+		fmt.Println(<-ch) // recevie from channel ch
+		// channel: communication mechanism between goroutines.
+
 	}
 	fmt.Printf("%.2fs elapsed\n",time.Since(start).Seconds())
 }
@@ -31,6 +34,8 @@ func fetch(url string, ch chan <- string){
 	}
 
 	nbytes,err := io.Copy(ioutil.Discard, resp.Body)
+	// ioutil.Discard : discard the body of response 
+	// Copy returns byte count
 
 	resp.Body.Close()
 
