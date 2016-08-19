@@ -31,3 +31,10 @@ var s string         // Defualt initialization.
 var s = ""           // Rare case.
 var s string = ""    // Redundant.
 ```
+### Concurrent execution.
+It is easy to use concurrent execution in Go language. You only to put "go" directive in front of function.
+
+```go
+go func()
+
+```
