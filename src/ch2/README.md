@@ -1,8 +1,8 @@
 ## Program Structure
 ### Name
 - Name (OK [a-z,A-Z,_,0-9],). Go distinguish an upper-case letter from an lower-case letter.
--- Naming rule -> "camel case", Go prefer "DoSomething" and "doSomething" to "do_somthing".
-
+ - Naming rule -> "camel case", Go prefer "DoSomething" and "dooSomething" to "do_somthing".
+ 
 ### Declarations
 Four major kinds of declarations: var, const, type, and func.
 
@@ -20,7 +20,3 @@ i, j = j, i  // tuple assignment ,swap
 ```
 
 * File open
-
-
-
-
