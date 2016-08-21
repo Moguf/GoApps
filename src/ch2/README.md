@@ -61,6 +61,40 @@ var n = flag.Bool("n", false, "help-message")
 flag.Parse()
 flag.Args()
 ```
+### new Function
+
+```go
+p := new(int)
+fmt.Println(*p)
+*p = 2
+fmt.Println(*p)
+```
+new(T) = unnamed variable of type T, default zero, and return address(*T).
+```go
+func newInt() *int{
+     return new(int)
+}
+
+func newInt() *int{
+     var dummy int
+     return &dummy
+}
+```
+### tuple assignment
+```go
+v, ok = m[key]    // v = value , ok = boolean
+v, ok = x.(T)
+v, ok = <-ch
+
+_, err = io.Copy(dst, src) // discard byte count
+
+medals := []string{"gold", "silver", "bronze"}
+```
+
+### Type Declarations
+```go
+type name underlying-type
+```
 
 * open File
 ```go
