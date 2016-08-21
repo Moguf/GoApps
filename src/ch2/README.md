@@ -5,6 +5,11 @@
  
 ### Declarations
 Four major kinds of declarations: var, const, type, and func.
+* built-in types
+|int|int8|int16|int32|int64|int16||
+|uint|uint8|uint16|uint32|uint64|uintptr|
+|float32|float64|complex32|complex64|||
+|bool|byte|rune|string|error||
 
 ### Variables
 ```go
@@ -17,6 +22,29 @@ var f, err = os.Open(file-name)
 name := expression
 i, j := 0, 1
 i, j = j, i  // tuple assignment ,swap
+// := statement is not necessarily declare all
+in, err := os.Open(infile)
+out, err := os.Create(outfile)
+// Error
+f, err := os.Open(infile)
+f, err := os.Create(outfile)
+```
+### Pointer
+```go
+x := 1
+var p *int
+
+
 ```
 
-* File open
+
+* open File
+```go
+import "os"
+f, err := os.Open(name)
+if err != nil{
+   return err
+}
+f.Close()
+```
+
