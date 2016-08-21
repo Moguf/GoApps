@@ -42,9 +42,25 @@ f, err := os.Create(outfile)
 x := 1
 var p *int
 
+var p = f()
+func f() *int{
+    v := 1
+    return &v
+}
+fmt.Println(f() == f()) // "false", return a distinct value.
 
+func incr(p *int) int{
+    *p++
+    return *p
+}
 ```
-
+* flag package -- set command-line arguments.
+```go
+var n = flag.Bool("n", false, "help-message")
+// flag name, defualt, help-message
+flag.Parse()
+flag.Args()
+```
 
 * open File
 ```go
@@ -55,4 +71,3 @@ if err != nil{
 }
 f.Close()
 ```
-
