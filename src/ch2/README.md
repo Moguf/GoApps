@@ -5,11 +5,19 @@
  
 ### Declarations
 Four major kinds of declarations: var, const, type, and func.
+* built-in constans
+|true|false|iota|nil|
 * built-in types
 |int|int8|int16|int32|int64|int16||
 |uint|uint8|uint16|uint32|uint64|uintptr|
 |float32|float64|complex32|complex64|||
 |bool|byte|rune|string|error||
+* built-in types
+|make|len|cap|new|
+|append|copy|close|delete|
+|complex|real|imag||
+|panic|recover|||
+
 
 ### Variables
 ```go
